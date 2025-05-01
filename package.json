@@ -21,5 +21,9 @@
   "devDependencies": {
     "nodemon": "^3.1.10"
   },
-  "type": "commonjs"
+  "type": "module",
+  "imports": {
+    "#service/*.js": "./src/service/*.js",
+    "#constant/*.js": "./src/constant/*.js"
+  }
 }
