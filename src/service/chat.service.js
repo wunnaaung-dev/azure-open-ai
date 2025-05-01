@@ -1,7 +1,7 @@
-import client from '../config/openAiClient.js'
-import { mySelf } from '../constant/data.js';
+const client = require('../config/openAiClient.js');
+const { mySelf } = require('../constant/data.js');
 
-export const generateReply = async (message) => {
+const generateReply = async (message) => {
     const personalDataString = JSON.stringify(mySelf, null, 2);
 
     const messages = [
@@ -25,8 +25,9 @@ export const generateReply = async (message) => {
         max_tokens: 800,
         temperature: 0.7,
         top_p: 0.95,
-    })
+    });
 
     return response.choices[0].message.content;
-}
+};
 
+module.exports = { generateReply };

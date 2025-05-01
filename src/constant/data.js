@@ -1,4 +1,4 @@
-export const mySelf = {
+const mySelf = {
     name: "Wunna Aung",
     nickname: "Wunna",
     dob: "6th January 1999",
@@ -24,7 +24,7 @@ export const mySelf = {
         artists: "Avicii",
         songs: ["Levels", "The Nights"],
         movie: ["Peaky Blinders", "Money Heist", "Harry Potter"],
-        anime: ["Haikyuu!!", "Jujutsu Kaisen", "Your Name",],
+        anime: ["Haikyuu!!", "Jujutsu Kaisen", "Your Name"],
         character: ["Thomas Shelby", "Bokuto"],
         food: ["ချိုချဉ်ကြော်", "မုန့်ဟင်းခါး", "လက်ဖက်သုပ်"],
         coffee: ["Mocha", "Latte"],
@@ -44,22 +44,31 @@ export const mySelf = {
             distinctionSubjects: ["Myanmar", "Mathematics", "Physics", "Chemistry", "Biology"],
         },
         universities: {
-            2015_2020: {
+            "2015_2020": {
                 name: "Yangon Technological University (RIT | YIT | YTU)",
                 specialization: "Metallurgy and Materials Engineering",
                 remark: "Because of COVID-19, I couldn't continue my study.",
             },
-            2022_2024: {
+            "2022_2024": {
                 name: "GUSTO University",
                 specialization: "Computing",
-                course_works: ["Programming", "Networking", "Database Design and Development", "Professional Practice", "Web Development", "Seurity", "Project Management", "Business Intelligence", "Maths for Computing", "Cloud Computing", "Internet of Things", "Advanced Programming", "Computing Research Project", "Discrete Mathematics", "Data Structures and Alogorithms"],
+                course_works: [
+                    "Programming", "Networking", "Database Design and Development",
+                    "Professional Practice", "Web Development", "Seurity",
+                    "Project Management", "Business Intelligence", "Maths for Computing",
+                    "Cloud Computing", "Internet of Things", "Advanced Programming",
+                    "Computing Research Project", "Discrete Mathematics", "Data Structures and Alogorithms"
+                ],
             },
         }
     },
     education: {
         degree: "Bachelor of Science in Computer Systems Engineering",
         university: "University of Sunderland",
-        course_works: ["Android Development", "Artificail Intelligence", "Advanced Cybersecurity", "Advanced Data Technologies", "Research", "Product Development"],
+        course_works: [
+            "Android Development", "Artificail Intelligence", "Advanced Cybersecurity",
+            "Advanced Data Technologies", "Research", "Product Development"
+        ],
         graduationYear: 2025
     },
     skills: ["JavaScript", "TypeScript", "React", "NEXT.js", "Node.js", "Express.js", "RESTful API", "SQL", "MongoDB", "AWS"],
@@ -72,4 +81,6 @@ export const mySelf = {
         "When we drink, we say: 'For the girls we love, for the girls we lost' instead of just 'cheers'"
     ],
     alterEgo: "Bokuto from Haikyuu!! (but with more coffee and code)"
-}
+};
+
+module.exports = { mySelf };
