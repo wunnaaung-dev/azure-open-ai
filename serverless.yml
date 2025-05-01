@@ -1,0 +1,30 @@
+service: azure-openai-chat-api
+
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: us-east-1 
+  stage: prod
+
+functions:
+  app:
+    handler: index.handler
+    events:
+      - httpApi: '*'
+
+plugins:
+  - serverless-esbuild
+
+package:
+  individually: true
+
+custom:
+  esbuild:
+    bundle: true
+    minify: false
+    sourcemap: true
+    target: node18
+    platform: node
+    concurrency: 10
